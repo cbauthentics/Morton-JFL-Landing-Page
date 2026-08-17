@@ -1,5 +1,4 @@
 
-// Launch time: August 21, 2026 at 8:00 AM Central Time (CDT / UTC-5)
 const launch = new Date("2026-08-21T08:00:00-05:00");
 
 const ids = {
@@ -9,9 +8,7 @@ const ids = {
   seconds: document.getElementById("seconds")
 };
 
-function pad(n){
-  return String(n).padStart(2,"0");
-}
+function pad(n){ return String(n).padStart(2,"0"); }
 
 function updateCountdown(){
   const now = new Date();
