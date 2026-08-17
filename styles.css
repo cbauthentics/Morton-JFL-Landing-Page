@@ -301,28 +301,29 @@ footer{
 }
 
 
-/* HERO FIX: real charging hog image with neon glow */
+/* HERO FIX: charging hog matched to the approved reference */
 .hog-stage{
   z-index:2;
   position:relative;
-  width:min(600px,86vw);
-  height:220px;
-  margin:8px auto 0;
+  width:min(680px,90vw);
+  height:225px;
+  margin:4px auto 0;
   display:grid;
   place-items:center;
+  overflow:visible;
 }
 
 .hog-neon{
   position:absolute;
-  width:72%;
-  height:68%;
+  width:76%;
+  height:70%;
   border-radius:50%;
   background:
-    radial-gradient(circle, rgba(255,0,0,.52) 0%, rgba(255,0,0,.24) 36%, rgba(255,0,0,0) 72%);
-  filter:blur(28px);
+    radial-gradient(circle, rgba(255,0,0,.34) 0%, rgba(255,0,0,.16) 38%, rgba(255,0,0,0) 72%);
+  filter:blur(30px);
   box-shadow:
-    0 0 40px rgba(255,0,0,.45),
-    0 0 85px rgba(255,0,0,.34);
+    0 0 36px rgba(255,0,0,.34),
+    0 0 72px rgba(255,0,0,.24);
   animation:heroGlow 3.2s ease-in-out infinite;
 }
 
@@ -330,13 +331,15 @@ footer{
   position:relative;
   z-index:2;
   display:block;
-  width:min(520px,78vw);
-  max-height:205px;
+  width:min(645px,88vw);
+  height:auto;
+  max-height:220px;
   object-fit:contain;
+  mix-blend-mode:screen;
   filter:
-    drop-shadow(0 0 4px rgba(255,255,255,.85))
-    drop-shadow(0 0 10px rgba(255,0,0,.95))
-    drop-shadow(0 0 22px rgba(255,0,0,.65));
+    drop-shadow(0 0 5px rgba(255,255,255,.55))
+    drop-shadow(0 0 10px rgba(255,0,0,.72))
+    drop-shadow(0 0 22px rgba(255,0,0,.46));
 }
 
 @media(max-width:640px){
@@ -347,5 +350,17 @@ footer{
   .charging-hog{
     width:min(430px,86vw);
     max-height:155px;
+  }
+}
+
+@media(max-width:640px){
+  .hog-stage{
+    width:min(600px,94vw);
+    height:170px;
+    margin-top:4px;
+  }
+  .charging-hog{
+    width:min(560px,92vw);
+    max-height:165px;
   }
 }
