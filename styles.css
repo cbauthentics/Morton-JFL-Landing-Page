@@ -285,38 +285,7 @@ footer{
   transform:skew(-8deg);
   text-shadow:0 0 22px rgba(255,0,0,.35);
 }
-.hog-stage{
-  z-index:2;
-  position:relative;
-  width:min(520px,80vw);
-  height:135px;
-  margin:8px auto 0;
-  display:grid;
-  place-items:center;
-}
-.hog-glow{
-  position:absolute;
-  width:75%;
-  height:80%;
-  border-radius:50%;
-  background:rgba(255,0,0,.32);
-  filter:blur(38px);
-  box-shadow:0 0 75px rgba(255,0,0,.6);
-  animation:heroGlow 3.8s ease-in-out infinite;
-}
-.hog-mark{
-  position:relative;
-  z-index:2;
-  color:#e51b23;
-  font-size:clamp(62px,9vw,105px);
-  line-height:1;
-  font-weight:1000;
-  font-style:italic;
-  letter-spacing:-6px;
-  -webkit-text-stroke:3px #f1f1f1;
-  text-shadow:0 0 8px #ff2027,0 0 20px #ff0000,0 0 40px #b80000;
-  transform:skew(-10deg);
-}
+
 .hero-copy{
   z-index:2;
   margin:4px 0 0;
@@ -329,4 +298,54 @@ footer{
   .hero-kicker{gap:10px;letter-spacing:4px;font-size:11px}
   .hero-kicker span{width:55px}
   .hog-stage{height:110px}
+}
+
+
+/* HERO FIX: real charging hog image with neon glow */
+.hog-stage{
+  z-index:2;
+  position:relative;
+  width:min(600px,86vw);
+  height:220px;
+  margin:8px auto 0;
+  display:grid;
+  place-items:center;
+}
+
+.hog-neon{
+  position:absolute;
+  width:72%;
+  height:68%;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, rgba(255,0,0,.52) 0%, rgba(255,0,0,.24) 36%, rgba(255,0,0,0) 72%);
+  filter:blur(28px);
+  box-shadow:
+    0 0 40px rgba(255,0,0,.45),
+    0 0 85px rgba(255,0,0,.34);
+  animation:heroGlow 3.2s ease-in-out infinite;
+}
+
+.charging-hog{
+  position:relative;
+  z-index:2;
+  display:block;
+  width:min(520px,78vw);
+  max-height:205px;
+  object-fit:contain;
+  filter:
+    drop-shadow(0 0 4px rgba(255,255,255,.85))
+    drop-shadow(0 0 10px rgba(255,0,0,.95))
+    drop-shadow(0 0 22px rgba(255,0,0,.65));
+}
+
+@media(max-width:640px){
+  .hog-stage{
+    height:165px;
+    width:min(520px,92vw);
+  }
+  .charging-hog{
+    width:min(430px,86vw);
+    max-height:155px;
+  }
 }
