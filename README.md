@@ -1,12 +1,14 @@
-# Morton JFL Landing Page
+# Morton JFL Landing Page Update
 
-Temporary coming-soon page for MortonJFLStore.com.
+Upload these files to the root of your existing GitHub repository.
 
-## Files
-- `index.html`
-- `morton-jfl-launch-poster.png`
+Files:
+- index.html
+- styles.css
+- script.js
+- morton-jfl-hero.png
+- morton-jfl-launch-poster.png
 
-## Render
-Create a new **Static Site** in Render and connect this repository.
-No build command is required.
-Publish directory: `.`
+Render will auto-deploy after the commit.
+
+The countdown is currently set to August 21, 2026 at 8:00 AM Central Time.
